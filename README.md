@@ -1,2 +1,6 @@
-# just-for-homework
-It is created for my classic homework
+# Just For Homework
+
+这是我的第一个 GitHub 仓库，用于完成作业练习。
+
+## 目录结构
+- `ex01/` — 作业1：HelloWorld 程序
