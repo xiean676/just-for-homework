@@ -14,8 +14,6 @@ const char* password = "YOUR_PASSWORD";
 
 const int ledPin = 2;
 const int touchPin = 4;
-const int freq = 5000;
-const int resolution = 8;
 
 WebServer server(80);
 
@@ -86,7 +84,6 @@ void setup() {
   Serial.begin(115200);
   pinMode(ledPin, OUTPUT);
   digitalWrite(ledPin, LOW);
-  ledcAttach(ledPin, freq, resolution);
 
   WiFi.begin(ssid, password);
   Serial.print("连接WiFi");
