@@ -23,7 +23,7 @@ void setup() {
 
 void loop() {
   int touchValue = touchRead(touchPin);
-  bool currentTouch = (touchValue < 30); // 小于30视为触摸
+  bool currentTouch = (touchValue < 600); // 小于600视为触摸
 
   // 边缘检测：从未触摸变为触摸的瞬间
   if (currentTouch && !lastTouchState) {

@@ -25,7 +25,7 @@ void setup() {
 
 void loop() {
   // 检测触摸切换档位
-  bool currentTouch = (touchRead(touchPin) < 30);
+  bool currentTouch = (touchRead(touchPin) < 600);
   if (currentTouch && !lastTouchState) {
     unsigned long now = millis();
     if (now - lastDebounceTime > debounceDelay) {
@@ -53,7 +53,7 @@ void loop() {
     ledcWrite(ledPin, duty);
     delay(delayMs);
     // 呼吸过程中也要检测触摸
-    bool touch = (touchRead(touchPin) < 30);
+    bool touch = (touchRead(touchPin) < 600);
     if (touch && !lastTouchState) {
       unsigned long now = millis();
       if (now - lastDebounceTime > debounceDelay) {
@@ -77,7 +77,7 @@ void loop() {
     ledcWrite(ledPin, duty);
     delay(delayMs);
     // 呼吸过程中也要检测触摸
-    bool touch = (touchRead(touchPin) < 30);
+    bool touch = (touchRead(touchPin) < 600);
     if (touch && !lastTouchState) {
       unsigned long now = millis();
       if (now - lastDebounceTime > debounceDelay) {

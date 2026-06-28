@@ -111,7 +111,7 @@ void loop() {
   // 布防状态下检测触摸
   if (armed && !alarmActive) {
     int touchValue = touchRead(touchPin);
-    if (touchValue < 30) {
+    if (touchValue < 600) {
       alarmActive = true;
       lastBlinkTime = millis();
       Serial.println("报警触发!");
